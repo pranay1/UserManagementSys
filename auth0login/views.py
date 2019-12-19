@@ -12,10 +12,10 @@ def index(request):
     if user.is_authenticated:
         return redirect(check_user_info)
     else:
-        return render(request, 'index1.html')
+        return render(request, 'index2.html')
 
 
-@login_required()
+@login_required
 def check_user_info(request):
     user = request.user
     if not Profile.objects.filter(username=user).exists():
@@ -39,7 +39,7 @@ def get_user_info(request):
     for key, value in mandatory_fields.items():
         if value == '':
             return redirect(edit_user_info)
-    return render(request, 'display_info1.html', {'username': username,
+    return render(request, 'display_info.html', {'username': username,
                                                   'firstname': firstname,
                                                   'lastname': lastname,
                                                   'phone': phone,
@@ -61,7 +61,7 @@ def edit_user_info(request):
     city = current_user_profile.city
     state = current_user_profile.state
     country = current_user_profile.country
-    return render(request, 'form1.html', {'username': username,
+    return render(request, 'form.html', {'username': username,
                                           'firstname': firstname,
                                           'lastname': lastname,
                                           'phone': phone,

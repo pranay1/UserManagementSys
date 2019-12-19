@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="py-5 text-center">
+        <div class="login-box auth0-box before">
+            <img src="https://i.cloudup.com/StzWWrY34s.png"/>
+            <h3>User Management System</h3>
+            <p></p><br>
+            <h3>User Details</h3>
+        </div>
+    </div>
+
+    <h3>Username :
+        <small class="text-muted">{{username}}</small>
+    </h3>
+
+    <h3>Firstname :
+        <small class="text-muted">{{firstname}}</small>
+    </h3>
+
+    <h3>Lastname :
+        <small class="text-muted">{{lastname}}</small>
+    </h3>
+
+
+    <h3>Email :
+        <small class="text-muted">{{email}}</small>
+    </h3>
+
+    <h3>phone :
+        <small class="text-muted">{{phone}}</small>
+    </h3>
+
+</div>
+
+{% endblock %}

@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ab0327c-7fac-4433-a73a-07407a226e3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth0login/templates/display_info1.html" beforeDir="false" afterPath="$PROJECT_DIR$/auth0login/templates/display_info1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth0login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth0login/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth0login/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/auth0login/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth0login/templates/display_info1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth0login/templates/form1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth0login/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/auth0login/templates/backup_code/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth0login/templates/index1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth0login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth0login/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usersystemOauth/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/usersystemOauth/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usersystemOauth/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/usersystemOauth/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +35,16 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/auth0login/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/deviceDetail/templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pgupta1\projects\usersystemOauth\deviceDetail\templates" />
       <recent name="C:\Users\pgupta1\projects\usersystemOauth\auth0login\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pgupta1\projects\usersystemOauth\auth0login\templates\backup_code" />
+      <recent name="C:\Users\pgupta1\projects\usersystemOauth" />
     </key>
   </component>
   <component name="RunDashboard">

@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = '4q-tzenb778-h*w84v#we5q9vx$w-l%bh+60srb#d=o7e!_fxu'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -39,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'auth0login',
-
+    'deviceDetail',
 
 ]
 
@@ -58,7 +56,8 @@ ROOT_URLCONF = 'usersystemOauth.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'auth0login', 'templates/'),
+                 os.path.join(BASE_DIR, 'deviceDetail', 'templates/'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,7 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'usersystemOauth.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -83,7 +81,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -103,7 +100,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -117,20 +113,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
 
-
-
-
 SOCIAL_AUTH_TRAILING_SLASH = False  # Remove trailing slash from routes
 SOCIAL_AUTH_AUTH0_DOMAIN = 'dev-mel-lcmm.auth0.com'
 SOCIAL_AUTH_AUTH0_KEY = 'DFP8IkLQQ8kY3oW5MzR2jC8COxJTASkP'
 SOCIAL_AUTH_AUTH0_SECRET = 'Vk2ixQPDcZL5ZYlYpJVAwrMOZsBlnb3mlsWZGuAUZwWS985EhOCso8i6lAJyrDk9'
-
 
 SOCIAL_AUTH_AUTH0_SCOPE = [
     'openid',
@@ -138,15 +129,10 @@ SOCIAL_AUTH_AUTH0_SCOPE = [
     'email'
 ]
 
-
 AUTHENTICATION_BACKENDS = {
     'auth0login.auth0backend.Auth0',
     'django.contrib.auth.backends.ModelBackend'
 }
 
-
 LOGIN_URL = '/login/auth0'
 LOGIN_REDIRECT_URL = '/check'
-
-
-

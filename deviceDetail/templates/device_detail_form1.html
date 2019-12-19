@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="  mt-5 ml-4 ">
+    <form  method="post">
+        {% csrf_token %}
+
+        <div class="text-center"> <h3>Enter Device Details</h3></div>
+        <label class="ml-3 mt-4"> Device Name: </label>
+        <input type="text" name="name" placeholder="{{name}}"><br>
+
+        <label  class="ml-3"> Device Type: </label>
+          <select name="type">
+        <option value="Generic">Generic</option>
+        <option value="digital input">Digital Input</option>
+        <option value="digital output">Digital Output</option>
+          <option value="analog input">Analog Input</option>
+         <option value="analog output">Analog Output</option>
+      </select>
+       <br>
+
+        <label  class="ml-3"> Parameters : </label>
+        <input type="text" name="parameters" placeholder="{{parameters}}"><br>
+
+
+    <br>
+        <br>
+
+     <!--    <input type="text" name="parameters"  placeholder="{{parameters}}" min="1" step="any" /><br>  -->
+
+
+
+        <input class="btn btn-success ml-5 mt-4" type="submit" value="Add">
+
+    </form>
+</div>
+
+{% endblock %}

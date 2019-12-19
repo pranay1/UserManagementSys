@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class=" ml-5 mt-3 ">
+
+
+
+
+<div class="container .row-cols-* mt-4 ">
+    <div class="text-center"> <h3>Device Table</h3></div>
+
+
+
+
+
+
+    <table class="table  table-striped mt-4">
+  <thead>
+
+    <tr>
+      <th  scope="col">S.No</th>
+       <th  scope="col">Device Name</th>
+        <th  scope="col">Device type</th>
+         <th  scope="col">Date Created</th>
+          <th  scope="col">Last Modified</th>
+
+
+    </tr>
+
+  </thead>
+  <tbody>
+   {% for device in devices %}
+    <tr>
+      <th scope="row">{{count}}</th>
+        <td><a href="{% url 'display_device_info' device.id %}">{{device.name}}</a></td>
+        <td>{{device.type}}</td>
+        <td>{{device.created}}</td>
+        <td>{{device.modified}}</td>
+
+
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+
+
+<br>
+<br>
+<a class="btn btn-info" href="{% url 'create_device'  %}">Add New Device</a>
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+    {% endblock %}
+
